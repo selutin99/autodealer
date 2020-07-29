@@ -5,5 +5,8 @@
                       transaction-type="RESOURCE_LOCAL">
         <class>com.galua.autodealer.entity.Country</class>
         <class>com.galua.autodealer.entity.AutoDealer</class>
+        <class>com.galua.autodealer.entity.Color</class>
+        <class>com.galua.autodealer.entity.CarBrand</class>
+        <class>com.galua.autodealer.entity.Equipment</class>
     </persistence-unit>
 </persistence>
