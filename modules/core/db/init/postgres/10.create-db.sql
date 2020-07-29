@@ -10,13 +10,13 @@ create table AUTODEALER_COUNTRY (
     DELETED_BY varchar(50),
     --
     NAME varchar(255),
-    CODE integer,
+    CODE varchar(3),
     --
     primary key (ID)
 )^
 -- end AUTODEALER_COUNTRY
--- begin AUTODEALER_AUTOMAKER
-create table AUTODEALER_AUTOMAKER (
+-- begin AUTODEALER_AUTO_DEALER
+create table AUTODEALER_AUTO_DEALER (
     ID uuid,
     VERSION integer not null,
     CREATE_TS timestamp,
@@ -27,9 +27,9 @@ create table AUTODEALER_AUTOMAKER (
     DELETED_BY varchar(50),
     --
     NAME varchar(255) not null,
-    MANUFACTURER_CODE integer not null,
-    COUNTRY_ID uuid,
+    CODE bigint,
+    COUNTRY_ID uuid not null,
     --
     primary key (ID)
 )^
--- end AUTODEALER_AUTOMAKER
+-- end AUTODEALER_AUTO_DEALER

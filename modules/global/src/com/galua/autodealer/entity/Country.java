@@ -8,32 +8,18 @@ import com.haulmont.chile.core.annotations.NamePattern;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import java.util.List;
-import javax.persistence.OneToMany;
 
 @NamePattern("%s %s|name,code")
 @Table(name = "AUTODEALER_COUNTRY")
 @Entity(name = "autodealer$Country")
 public class Country extends StandardEntity {
-    private static final long serialVersionUID = 1742387434406631978L;
+    private static final long serialVersionUID = -4309396564535881575L;
 
     @Column(name = "NAME")
     protected String name;
 
-    @Column(name = "CODE")
-    protected Integer code;
-
-    @OneToMany(mappedBy = "country")
-    protected List<Automaker> automaker;
-
-    public List<Automaker> getAutomaker() {
-        return automaker;
-    }
-
-    public void setAutomaker(List<Automaker> automaker) {
-        this.automaker = automaker;
-    }
-
+    @Column(name = "CODE", length = 3)
+    protected String code;
 
 
     public void setName(String name) {
@@ -44,11 +30,11 @@ public class Country extends StandardEntity {
         return name;
     }
 
-    public void setCode(Integer code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
-    public Integer getCode() {
+    public String getCode() {
         return code;
     }
 

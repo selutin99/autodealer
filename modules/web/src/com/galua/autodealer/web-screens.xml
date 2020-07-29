@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
-
+    <screen id="autodealer$Country.browse"
+            template="com/galua/autodealer/web/country/country-browse.xml"/>
+    <screen id="autodealer$Country.edit"
+            template="com/galua/autodealer/web/country/country-edit.xml"/>
+    <screen id="autodealer$Automaker.browse"
+            template="com/galua/autodealer/web/automaker/automaker-browse.xml"/>
+    <screen id="autodealer$Automaker.edit"
+            template="com/galua/autodealer/web/automaker/automaker-edit.xml"/>
 </screen-config>

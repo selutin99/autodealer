@@ -4,6 +4,6 @@
     <persistence-unit name="AutoDealer"
                       transaction-type="RESOURCE_LOCAL">
         <class>com.galua.autodealer.entity.Country</class>
-        <class>com.galua.autodealer.entity.Automaker</class>
+        <class>com.galua.autodealer.entity.AutoDealer</class>
     </persistence-unit>
 </persistence>
