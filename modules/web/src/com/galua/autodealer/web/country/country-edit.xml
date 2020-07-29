@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.galua.autodealer.web.country.CountryEdit"
+        datasource="countryDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.galua.autodealer.web.country">
+    <dsContext>
+        <datasource id="countryDs"
+                    class="com.galua.autodealer.entity.Country"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="countryDs">
+            <column width="250px">
+                <field property="name"/>
+                <field property="code"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

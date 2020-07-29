@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.galua.autodealer.web.autodealer.AutoDealerBrowse"
+        focusComponent="autoDealersTable"
+        lookupComponent="autoDealersTable"
+        messagesPack="com.galua.autodealer.web.autodealer">
+    <dsContext>
+        <groupDatasource id="autoDealersDs"
+                         class="com.galua.autodealer.entity.AutoDealer"
+                         view="autoDealer-view">
+            <query>
+                <![CDATA[select e from autodealer$AutoDealer e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="autoDealersTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="autoDealersTable"
+                datasource="autoDealersDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="autoDealersTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="code"/>
+                <column id="country"/>
+            </columns>
+            <rows datasource="autoDealersDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="autoDealersTable.create"/>
+                <button id="editBtn"
+                        action="autoDealersTable.edit"/>
+                <button id="removeBtn"
+                        action="autoDealersTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

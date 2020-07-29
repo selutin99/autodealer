@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.galua.autodealer.web.country.CountryBrowse"
+        focusComponent="countriesTable"
+        lookupComponent="countriesTable"
+        messagesPack="com.galua.autodealer.web.country">
+    <dsContext>
+        <groupDatasource id="countriesDs"
+                         class="com.galua.autodealer.entity.Country"
+                         view="_local">
+            <query>
+                <![CDATA[select e from autodealer$Country e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="countriesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="countriesTable"
+                datasource="countriesDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="countriesTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="code"/>
+            </columns>
+            <rows datasource="countriesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="countriesTable.create"/>
+                <button id="editBtn"
+                        action="countriesTable.edit"/>
+                <button id="removeBtn"
+                        action="countriesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

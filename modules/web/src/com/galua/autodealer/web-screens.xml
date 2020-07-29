@@ -8,4 +8,12 @@
             template="com/galua/autodealer/web/automaker/automaker-browse.xml"/>
     <screen id="autodealer$Automaker.edit"
             template="com/galua/autodealer/web/automaker/automaker-edit.xml"/>
+    <screen id="autodealer$Color.browse"
+            template="com/galua/autodealer/web/color/color-browse.xml"/>
+    <screen id="autodealer$Color.edit"
+            template="com/galua/autodealer/web/color/color-edit.xml"/>
+    <screen id="autodealer$AutoDealer.browse"
+            template="com/galua/autodealer/web/autodealer/auto-dealer-browse.xml"/>
+    <screen id="autodealer$AutoDealer.edit"
+            template="com/galua/autodealer/web/autodealer/auto-dealer-edit.xml"/>
 </screen-config>

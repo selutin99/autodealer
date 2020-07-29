@@ -3,6 +3,7 @@
     <menu id="application-autodealer"
           insertBefore="administration">
         <item screen="autodealer$Country.browse"/>
-        <item screen="autodealer$Automaker.browse"/>
+        <item screen="autodealer$Color.browse"/>
+        <item screen="autodealer$AutoDealer.browse"/>
     </menu>
 </menu-config>
