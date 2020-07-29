@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.galua.autodealer.web.equipment.EquipmentBrowse"
+        focusComponent="equipmentsTable"
+        lookupComponent="equipmentsTable"
+        messagesPack="com.galua.autodealer.web.equipment">
+    <dsContext>
+        <groupDatasource id="equipmentsDs"
+                         class="com.galua.autodealer.entity.Equipment"
+                         view="equipment-view">
+            <query>
+                <![CDATA[select e from autodealer$Equipment e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="equipmentsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="equipmentsTable"
+                datasource="equipmentsDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="equipmentsTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="price"/>
+                <column id="carType"/>
+                <column id="annotation"/>
+            </columns>
+            <rows datasource="equipmentsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="equipmentsTable.create"/>
+                <button id="editBtn"
+                        action="equipmentsTable.edit"/>
+                <button id="removeBtn"
+                        action="equipmentsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

@@ -6,4 +6,15 @@
         <property name="country"
                   view="_local"/>
     </view>
+    <view class="com.galua.autodealer.entity.CarBrand"
+          extends="_local"
+          name="carBrand-view">
+        <property name="equipment"
+                  view="_minimal"/>
+        <property name="autoDealer"
+                  view="_minimal"/>
+    </view>
+    <view class="com.galua.autodealer.entity.Equipment"
+          extends="_local"
+          name="equipment-view"/>
 </views>

@@ -16,4 +16,12 @@
             template="com/galua/autodealer/web/autodealer/auto-dealer-browse.xml"/>
     <screen id="autodealer$AutoDealer.edit"
             template="com/galua/autodealer/web/autodealer/auto-dealer-edit.xml"/>
+    <screen id="autodealer$CarBrand.browse"
+            template="com/galua/autodealer/web/carbrand/car-brand-browse.xml"/>
+    <screen id="autodealer$CarBrand.edit"
+            template="com/galua/autodealer/web/carbrand/car-brand-edit.xml"/>
+    <screen id="autodealer$Equipment.browse"
+            template="com/galua/autodealer/web/equipment/equipment-browse.xml"/>
+    <screen id="autodealer$Equipment.edit"
+            template="com/galua/autodealer/web/equipment/equipment-edit.xml"/>
 </screen-config>

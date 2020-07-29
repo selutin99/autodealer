@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.galua.autodealer.web.carbrand.CarBrandBrowse"
+        focusComponent="carBrandsTable"
+        lookupComponent="carBrandsTable"
+        messagesPack="com.galua.autodealer.web.carbrand">
+    <dsContext>
+        <groupDatasource id="carBrandsDs"
+                         class="com.galua.autodealer.entity.CarBrand"
+                         view="carBrand-view">
+            <query>
+                <![CDATA[select e from autodealer$CarBrand e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="carBrandsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="carBrandsTable"
+                datasource="carBrandsDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="carBrandsTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="equipment"/>
+                <column id="autoDealer"/>
+            </columns>
+            <rows datasource="carBrandsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="carBrandsTable.create"/>
+                <button id="editBtn"
+                        action="carBrandsTable.edit"/>
+                <button id="removeBtn"
+                        action="carBrandsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

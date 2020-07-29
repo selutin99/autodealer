@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.galua.autodealer.web.equipment.EquipmentEdit"
+        datasource="equipmentDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.galua.autodealer.web.equipment">
+    <dsContext>
+        <datasource id="equipmentDs"
+                    class="com.galua.autodealer.entity.Equipment"
+                    view="equipment-view"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="equipmentDs">
+            <column width="250px">
+                <field property="name"/>
+                <field property="price"/>
+                <field property="carType"/>
+                <field property="annotation"
+                       rows="5"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

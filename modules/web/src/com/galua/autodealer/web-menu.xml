@@ -2,8 +2,7 @@
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
     <menu id="application-autodealer"
           insertBefore="administration">
-        <item screen="autodealer$Country.browse"/>
-        <item screen="autodealer$Color.browse"/>
         <item screen="autodealer$AutoDealer.browse"/>
+        <item screen="autodealer$CarBrand.browse"/>
     </menu>
 </menu-config>
