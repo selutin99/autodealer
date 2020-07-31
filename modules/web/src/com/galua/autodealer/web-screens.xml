@@ -24,4 +24,16 @@
             template="com/galua/autodealer/web/equipment/equipment-browse.xml"/>
     <screen id="autodealer$Equipment.edit"
             template="com/galua/autodealer/web/equipment/equipment-edit.xml"/>
+    <screen id="autodealer$Car.browse"
+            template="com/galua/autodealer/web/car/car-browse.xml"/>
+    <screen id="autodealer$Car.edit"
+            template="com/galua/autodealer/web/car/car-edit.xml"/>
+    <screen id="autodealer$LegalPerson.browse"
+            template="com/galua/autodealer/web/legalperson/legal-person-browse.xml"/>
+    <screen id="autodealer$LegalPerson.edit"
+            template="com/galua/autodealer/web/legalperson/legal-person-edit.xml"/>
+    <screen id="autodealer$PhysicalPerson.browse"
+            template="com/galua/autodealer/web/physicalperson/physical-person-browse.xml"/>
+    <screen id="autodealer$PhysicalPerson.edit"
+            template="com/galua/autodealer/web/physicalperson/physical-person-edit.xml"/>
 </screen-config>

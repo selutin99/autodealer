@@ -17,4 +17,12 @@
     <view class="com.galua.autodealer.entity.Equipment"
           extends="_local"
           name="equipment-view"/>
+    <view class="com.galua.autodealer.entity.Car"
+          extends="_local"
+          name="car-view">
+        <property name="autoDealer"
+                  view="_minimal"/>
+        <property name="carBrand"
+                  view="_minimal"/>
+    </view>
 </views>

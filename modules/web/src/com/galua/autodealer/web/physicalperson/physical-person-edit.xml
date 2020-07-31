@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.galua.autodealer.web.physicalperson.PhysicalPersonEdit"
+        datasource="physicalPersonDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.galua.autodealer.web.physicalperson">
+    <dsContext>
+        <datasource id="physicalPersonDs"
+                    class="com.galua.autodealer.entity.PhysicalPerson"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="physicalPersonDs">
+            <column width="250px">
+                <field property="firstName"/>
+                <field property="lastName"/>
+                <field property="phone"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

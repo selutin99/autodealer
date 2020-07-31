@@ -8,5 +8,8 @@
         <class>com.galua.autodealer.entity.Color</class>
         <class>com.galua.autodealer.entity.CarBrand</class>
         <class>com.galua.autodealer.entity.Equipment</class>
+        <class>com.galua.autodealer.entity.Car</class>
+        <class>com.galua.autodealer.entity.LegalPerson</class>
+        <class>com.galua.autodealer.entity.PhysicalPerson</class>
     </persistence-unit>
 </persistence>

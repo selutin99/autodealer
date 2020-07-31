@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.galua.autodealer.web.legalperson.LegalPersonBrowse"
+        focusComponent="legalPersonsTable"
+        lookupComponent="legalPersonsTable"
+        messagesPack="com.galua.autodealer.web.legalperson">
+    <dsContext>
+        <groupDatasource id="legalPersonsDs"
+                         class="com.galua.autodealer.entity.LegalPerson"
+                         view="_local">
+            <query>
+                <![CDATA[select e from autodealer$LegalPerson e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="legalPersonsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="legalPersonsTable"
+                datasource="legalPersonsDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="legalPersonsTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="tin"/>
+                <column id="address"/>
+                <column id="phone"/>
+            </columns>
+            <rows datasource="legalPersonsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="legalPersonsTable.create"/>
+                <button id="editBtn"
+                        action="legalPersonsTable.edit"/>
+                <button id="removeBtn"
+                        action="legalPersonsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>
